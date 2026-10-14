@@ -88,7 +88,21 @@ Para **trocar o currículo**, substitua o arquivo `public/curriculo-vinicius-bua
 
 ## Deploy
 
-O projeto gera arquivos estáticos em `dist/` e pode ser publicado em qualquer hospedagem estática, como Vercel, Netlify ou GitHub Pages. Na Vercel, basta importar o repositório: o Vite é detectado automaticamente, com `npm run build` como comando de build e `dist` como pasta de saída.
+O projeto gera arquivos estáticos em `dist/` e pode ser publicado em qualquer hospedagem estática.
+
+### GitHub Pages (já configurado)
+
+O workflow `.github/workflows/deploy.yml` faz o build e publica a cada push na branch `main`. Para ativar:
+
+1. No repositório, abra **Settings → Pages**.
+2. Em **Source**, escolha **GitHub Actions**.
+3. Faça um push na `main` (ou rode o workflow manualmente na aba **Actions**).
+
+O workflow define `BASE_PATH` com o nome do repositório, porque no GitHub Pages o site fica em `usuario.github.io/nome-do-repositorio/`. Sem isso, os arquivos não são encontrados e a página fica em branco.
+
+### Vercel ou Netlify
+
+Importe o repositório: o Vite é detectado automaticamente, com `npm run build` como comando de build e `dist` como pasta de saída. Nesses serviços o site fica na raiz, então não precisa de `BASE_PATH`.
 
 ## Contato
 
