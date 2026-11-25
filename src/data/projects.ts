@@ -137,5 +137,5 @@ export const projects: Project[] = [
 
 export const inProgress = {
   title: 'Pokédexia',
-  summary: 'Projeto de programação relacionado a uma Pokédex, ainda em desenvolvimento. Repositório e demonstração serão adicionados quando existirem.',
+  summary: 'Pokédex em React e TypeScript, com Vite, Tailwind CSS, TanStack Query e Zod, consumindo a PokéAPI. Ainda em desenvolvimento; repositório e demonstração serão adicionados quando estiverem prontos.',
 }
